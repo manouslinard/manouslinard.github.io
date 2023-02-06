@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manousos Linardakis</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1c1c1c;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+            background-image: url("https://minimalistic-wallpaper.demolab.com/?random=4");
+            height: 90vh;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .header-text {
+            color: white;
+            font-size: 48px;
+            text-shadow: 1px 1px 4px #333;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            text-align: center;
+            color: white;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            background-color: #1c1c1c;
+            /* padding: 20px; */
+            padding: 0 30px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .navigation a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 30px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .navigation a:hover {
+            color: #f48024;
+        }
+
+        .section_center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 140px);
+            padding: 30px;
+        }
+
+        .section_right {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: calc(100vh - 140px);
+            padding: 30px;
+        }
+
+        .section_left {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            height: calc(100vh - 140px);
+            padding: 30px;
+        }
+
+
+        .card {
+            background-color: #333;
+            color: #fff;
+            width: 55%;
+            height: 450px;
+            box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+            text-align: center;
+            margin: 30px;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
+            padding: 1em;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.25);
+            background-size: cover;
+            transform: scale(1.1);
+        }
+
+        .card h2 {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        .card p {
+            /* padding: 30px; */
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .about-me h2 {
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .about-me p {
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .my-projects h2 {
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .my-projects p {
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .contact h2 {
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        .contact p {
+            text-align: left;
+            margin-left: 10px;
+        }
+
+        footer {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1em;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Hello, I'm Manousos Linardakis</h1>
+    </header>
+    <nav class="navigation">
+        <a onclick="scrollToSection('about')">About</a>
+        <a onclick="scrollToSection('projects')">Projects</a>
+        <a onclick="scrollToSection('skills')">Skills</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+    </nav>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.querySelector(`#${sectionId}`);
+            section.scrollIntoView({ block: "center", behavior: 'smooth' });
+        }
+    </script>
+    <section class="section_left">
+        <div class="card about-me" id="about">
+            <h2>About Me</h2>
+            <p>
+                TODO
+            </p>
+        </div>
+        <img src="https://minimalistic-wallpaper.demolab.com/?random=1" />
+    </section>
+    <section class="section_right">
+        <img src="https://minimalistic-wallpaper.demolab.com/?random=2" />
+        <div class="card my-projects" id="projects">
+            <h2>My Projects</h2>
+            <p>
+                TODO
+            </p>
+        </div>
+    </section>
+    <section class="section_center" id="skills">
+        <div class="card" id="frontend">
+            <h2>Frontend Skills</h2>
+            <p>
+                TODO
+            </p>
+        </div>
+        <div class="card" id="backend">
+            <h2>Backend Skills</h2>
+            <p>
+                TODO
+            </p>
+        </div>
+        <div class="card" id="tools">
+            <h2>Tools</h2>
+            <p>
+                TODO
+            </p>
+        </div>
+    </section>
+    <section class="section_left">
+        <div class="card contact" id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                TODO
+            </p>
+        </div>
+        <img src="https://minimalistic-wallpaper.demolab.com/?random=3" />
+    </section>
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('.header');
+            const nav = document.querySelector('.navigation');
+            if (window.scrollY >= header.offsetHeight) {
+                nav.classList.add('fixed');
+            } else {
+                nav.classList.remove('fixed');
+            }
+        });
+    </script>
+</body>
+<footer>
+    <p>&copy; 2023 Manousos Linardakis. All rights reserved.</p>
+</footer>
+
+</html>
