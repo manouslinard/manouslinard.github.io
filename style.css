@@ -1,0 +1,289 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c1c1c;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    background-image: url("https://minimalistic-wallpaper.demolab.com/?random");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-text {
+    color: white;
+    font-size: 48px;
+    text-shadow: 1px 1px 4px #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+img {
+    height: 100%;
+    width: 64%;
+    display: block;
+    object-fit: contain;
+}
+
+@media only screen and (max-width: 767px) {
+    img {
+        display: none;
+    }
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #1c1c1c;
+    /* padding: 20px; */
+    padding: 0 30px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.navigation a:hover {
+    color: #f48024;
+}
+
+.section_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 30px;
+}
+
+.section_right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 90vh;
+    padding: 30px;
+}
+
+.section_left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 90vh;
+    padding: 30px;
+}
+
+
+.card {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.25);
+    background-size: cover;
+    transform: scale(1.1);
+}
+
+.card h2 {
+    margin-top: 30px;
+    font-size: 24px;
+}
+
+.card p {
+    /* padding: 30px; */
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.about-me h2 {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.about-me p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.my-projects h2 {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.my-projects p {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.contact h2 {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.contact p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+.cv-bubble {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(18, 18, 167);
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fixed-bubble {
+    position: fixed;
+    top: 68px;
+    right: 20px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.cv-bubble:hover {
+    background-color: #0B2E59;
+}
+
+@media (max-width: 767px) {
+    .header {
+        height: 70vh;
+    }
+
+    .header-text {
+        font-size: 36px;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .about-me h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .about-me p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .my-projects h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .my-projects p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contact h2 {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contact p {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .section_center {
+        height: 85vh;
+        padding: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section_right {
+        justify-content: center;
+    }
+
+    .section_left {
+        justify-content: center;
+    }
+
+    .cv-bubble {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
