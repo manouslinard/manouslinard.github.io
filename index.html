@@ -87,7 +87,10 @@
             if (window.scrollY >= header.offsetHeight) {
                 nav.classList.add('fixed');
                 bubble.classList.add('fixed-bubble');
-            } else {
+            } else if (window.scrollY >= header.offsetHeight - 50) {
+                bubble.classList.add('fixed-bubble');
+            }
+             else {
                 nav.classList.remove('fixed');
                 bubble.classList.remove('fixed-bubble');
             }
