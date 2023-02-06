@@ -46,11 +46,6 @@ img {
     object-fit: contain;
 }
 
-@media only screen and (max-width: 767px) {
-    img {
-        display: none;
-    }
-}
 
 .header h1 {
     margin: 0;
@@ -139,15 +134,17 @@ img {
 }
 
 @keyframes breathing {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.015);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.015);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -218,7 +215,8 @@ p {
     z-index: 1;
 }
 
-.about-me h2, p {
+.about-me h2,
+p {
     z-index: 0;
 }
 
@@ -271,7 +269,8 @@ p {
     z-index: 1;
 }
 
-.my-projects h2, p{
+.my-projects h2,
+p {
     z-index: 0;
 }
 
@@ -324,7 +323,8 @@ p {
     z-index: 1;
 }
 
-.contact h2, p {
+.contact h2,
+p {
     z-index: 0;
 }
 
@@ -394,7 +394,8 @@ p {
     z-index: 1;
 }
 
-.front-skill h2, p {
+.front-skill h2,
+p {
     z-index: 0;
 }
 
@@ -436,7 +437,8 @@ p {
     z-index: 1;
 }
 
-.back-skill h2, p {
+.back-skill h2,
+p {
     z-index: 0;
 }
 
@@ -479,7 +481,8 @@ p {
     z-index: 1;
 }
 
-.tool-skill h2, p {
+.tool-skill h2,
+p {
     z-index: 0;
 }
 
@@ -494,6 +497,15 @@ a {
 }
 
 @media (max-width: 767px) {
+    img {
+        display: none;
+    }
+
+    .my-projects:before {
+        right: 100%;
+        left: 0;
+    }
+
     .header {
         height: 70vh;
     }
