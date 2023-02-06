@@ -502,7 +502,6 @@ a {
     }
 
     .my-projects:before {
-        right: 100%;
         left: 0;
     }
 
