@@ -1,6 +1,6 @@
 This is the code used for my web-portfolio.
 
-Check the web-portfolio [here](http://manouslinard.github.io/).
+Check out the web-portfolio [here](http://manouslinard.github.io/).
 
 &copy; Manousos Linardakis. All rights reserved.
 
