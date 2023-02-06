@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <title>Manousos Linardakis</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel="shortcut icon" type="image/x-icon" href="panda.ico">
 </head>
 
@@ -31,10 +32,12 @@
                 TODO
             </p>
         </div>
-        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/programmer.gif" title="https://media1.giphy.com/media/u2pmTWUi0MXjyrMaVj/giphy.gif?cid=ecf05e47i3sl99ki6n55yqo94g3gs66lkh2lyjykgexew1nv&rid=giphy.gif&ct=g"/>
+        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/programmer.gif"
+            title="https://media1.giphy.com/media/u2pmTWUi0MXjyrMaVj/giphy.gif?cid=ecf05e47i3sl99ki6n55yqo94g3gs66lkh2lyjykgexew1nv&rid=giphy.gif&ct=g" />
     </section>
     <section class="section_right">
-        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/box.gif" title="https://media0.giphy.com/media/povenlBAIz14s/giphy.gif?cid=ecf05e47birc5h11vkqcvq4hbkjhz2936qqf9vb4esue7ce6&rid=giphy.gif&ct=g"/>
+        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/box.gif"
+            title="https://media0.giphy.com/media/povenlBAIz14s/giphy.gif?cid=ecf05e47birc5h11vkqcvq4hbkjhz2936qqf9vb4esue7ce6&rid=giphy.gif&ct=g" />
         <div class="card my-projects" id="projects">
             <h2>My Projects</h2>
             <p>
@@ -69,7 +72,8 @@
                 TODO
             </p>
         </div>
-        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/sphere.gif" title="https://media0.giphy.com/media/20zeXryvanSXys6Trb/giphy.gif?cid=ecf05e477gfx64dxb4b5ung50taz6mjmynxi4wib21sw9c93&rid=giphy.gif&ct=g"/>
+        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/sphere.gif"
+            title="https://media0.giphy.com/media/20zeXryvanSXys6Trb/giphy.gif?cid=ecf05e477gfx64dxb4b5ung50taz6mjmynxi4wib21sw9c93&rid=giphy.gif&ct=g" />
     </section>
     <div class="cv-bubble"
         onclick="window.open('https://github.com/manouslinard/manouslinard.github.io/blob/master/Manousos_CV.pdf')">
@@ -91,7 +95,11 @@
     </script>
 </body>
 <footer>
-    <p>&copy; 2023 Manousos Linardakis. All rights reserved.</p>
+    <p id="copyright">&copy; <span id="year"></span> Manousos Linardakis. All rights reserved.</p>
+
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
 </footer>
 
 </html>
