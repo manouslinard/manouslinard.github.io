@@ -200,6 +200,22 @@
             text-align: center;
         }
 
+        .cv-bubble {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgb(18, 18, 167);
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cv-bubble:hover {
+            background-color: #0B2E59;
+        }
+
         @media (max-width: 767px) {
             .header {
                 height: 70vh;
@@ -260,6 +276,13 @@
             }
 
 
+            .cv-bubble {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 </head>
@@ -268,6 +291,10 @@
     <header class="header">
         <h1>Hello, I'm Manousos Linardakis</h1>
     </header>
+    <div class="cv-bubble"
+        onclick="window.open('https://github.com/manouslinard/manouslinard.github.io/blob/master/Manousos_CV.pdf')">
+        <p style="color: white; margin-top: 17px;">CV</p>
+    </div>
     <nav class="navigation">
         <a onclick="scrollToSection('about')">About</a>
         <a onclick="scrollToSection('projects')">Projects</a>
