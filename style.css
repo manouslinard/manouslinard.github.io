@@ -221,12 +221,12 @@ p {
 }
 
 .my-projects h2 {
-    text-align: right;
+    text-align: left;
     margin-right: 10px;
 }
 
 .my-projects p {
-    text-align: right;
+    text-align: left;
     margin-right: 10px;
     z-index: 0;
 }
@@ -254,7 +254,7 @@ p {
     width: 0%;
     height: 100%;
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     transition: all 0.4s ease-in-out;
 }
@@ -486,10 +486,30 @@ p {
     z-index: 0;
 }
 
-
+.img-lang {
+    width: 100px;
+    height: 74px;
+    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
+}
 
 a {
     cursor: pointer;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    float: none; margin: 0 auto;
+    content: "";
+    clear: both;
+    display: table;
+    text-align: center;
 }
 
 .cv-bubble:hover {
@@ -499,10 +519,6 @@ a {
 @media (max-width: 767px) {
     img {
         display: none;
-    }
-
-    .my-projects:before {
-        left: 0;
     }
 
     .header {
