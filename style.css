@@ -132,13 +132,15 @@ img {
     transition: all 0.2s ease-in-out;
     display: inline-block;
     padding: 1em;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.25);
     background-size: cover;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .card h2 {
@@ -162,6 +164,43 @@ img {
     margin-left: 10px;
 }
 
+.about-me {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+}
+
+.about-me:before {
+    content: "";
+    background-color: rgb(123, 4, 174);
+    /* background-color: rgba(186, 41, 41, 0.961); */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.about-me:hover:before {
+    width: 100%;
+}
+
+.about-me h2,
+p {
+    position: relative;
+    z-index: 1;
+}
+
 .my-projects h2 {
     text-align: right;
     margin-right: 10px;
@@ -172,6 +211,43 @@ img {
     margin-right: 10px;
 }
 
+.my-projects {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+}
+
+.my-projects:before {
+    content: "";
+    /* background-color: rgba(147, 1, 209, 0.771); */
+    background-color: rgb(19, 80, 201);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.my-projects:hover:before {
+    width: 100%;
+}
+
+.my-projects h2,
+p {
+    position: relative;
+    z-index: 1;
+}
+
 .contact h2 {
     text-align: left;
     margin-left: 10px;
@@ -180,6 +256,43 @@ img {
 .contact p {
     text-align: left;
     margin-left: 10px;
+}
+
+.contact {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+}
+
+.contact:before {
+    content: "";
+    background-color: rgba(9, 171, 68, 0.771);
+    /* background-color: rgb(186, 41, 41); */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact:hover:before {
+    width: 100%;
+}
+
+.contact h2,
+p {
+    position: relative;
+    z-index: 1;
 }
 
 footer {
@@ -196,7 +309,7 @@ footer {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: rgb(18, 18, 167);
+    background-color: rgb(17, 48, 189);
     width: 50px;
     height: 50px;
     border-radius: 25px;
@@ -215,7 +328,7 @@ a {
 }
 
 .cv-bubble:hover {
-    background-color: #0B2E59;
+    background-color: #1c69bb;
 }
 
 @media (max-width: 767px) {
