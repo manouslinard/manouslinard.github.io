@@ -341,6 +341,135 @@ footer {
     right: 26px;
 }
 
+.front-skill {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+.front-skill:before {
+    content: "";
+    background-color: rgb(186, 41, 41);
+    /* background-color: rgb(186, 41, 41); */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.front-skill:hover:before {
+    width: 100%;
+}
+
+.front-skill h2,
+p {
+    position: relative;
+    z-index: 1;
+}
+
+.front-skill h2, p {
+    z-index: 0;
+}
+
+.back-skill {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+.back-skill:before {
+    content: "";
+    background-color: rgba(1, 122, 45, 0.771);
+    /* background-color: rgb(186, 41, 41); */
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.back-skill:hover:before {
+    width: 100%;
+}
+
+.back-skill h2,
+p {
+    position: relative;
+    z-index: 1;
+}
+
+.back-skill h2, p {
+    z-index: 0;
+}
+
+
+
+.tool-skill {
+    background-color: #333;
+    color: #fff;
+    width: 55%;
+    height: 90%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    padding: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+.tool-skill:before {
+    content: "";
+    background-color: rgba(255, 119, 0, 0.871);
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.tool-skill:hover:before {
+    width: 100%;
+}
+
+.tool-skill h2,
+p {
+    position: relative;
+    z-index: 1;
+}
+
+.tool-skill h2, p {
+    z-index: 0;
+}
+
+
+
 a {
     cursor: pointer;
 }
