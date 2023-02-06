@@ -263,12 +263,18 @@ a {
     }
 
     .section_center {
-        height: 85vh;
-        padding: 0px;
-        margin-left: 10px;
-        margin-right: 10px;
         flex-direction: column;
         height: auto;
+    }
+
+    .section_center h2 {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .section_center p {
+        text-align: center;
+        margin-top: 10px;
     }
 
     .section_right {
