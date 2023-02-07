@@ -160,7 +160,6 @@ img {
     padding: 1em;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     animation: breathing 3s ease-in-out infinite;
 }
 
@@ -275,7 +274,6 @@ p {
     display: inline-block;
     padding: 1em;
     position: relative;
-    cursor: pointer;
 }
 
 .my-projects:before {
@@ -329,7 +327,6 @@ p {
     display: inline-block;
     padding: 1em;
     position: relative;
-    cursor: pointer;
 }
 
 .contact:before {
@@ -400,7 +397,6 @@ footer {
     display: inline-block;
     padding: 1em;
     position: relative;
-    cursor: pointer;
 }
 
 .front-skill:before {
@@ -443,7 +439,6 @@ p {
     display: inline-block;
     padding: 1em;
     position: relative;
-    cursor: pointer;
 }
 
 .back-skill:before {
@@ -488,7 +483,6 @@ p {
     display: inline-block;
     padding: 1em;
     position: relative;
-    cursor: pointer;
 }
 
 .tool-skill:before {
