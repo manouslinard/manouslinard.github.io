@@ -90,6 +90,15 @@ img {
     color: #f48024;
 }
 
+.text-hover-color a {
+    color: #fff;
+    /* text-decoration: none; */
+    transition: all 0.2s ease-in-out;
+}
+.text-hover-color a:hover {
+    color: #f48024;
+}
+
 .section_center {
     display: flex;
     justify-content: center;
@@ -521,6 +530,10 @@ a {
         display: none;
     }
 
+    .img-lang {
+        display: block;
+    }
+
     .header {
         height: 70vh;
     }
@@ -536,12 +549,14 @@ a {
 
     .about-me h2 {
         text-align: center;
-        margin-top: 10px;
+        /* margin-top: 10px;
+        text-size-adjust: auto; */
     }
 
     .about-me p {
         text-align: center;
-        margin-top: 10px;
+        /* margin-top: 10px;
+        text-size-adjust: auto; */
     }
 
     .my-projects h2 {
@@ -577,14 +592,17 @@ a {
     .section_center p {
         text-align: center;
         margin-top: 10px;
+        height: fit-content;
     }
 
     .section_right {
         justify-content: center;
+        height: fit-content;
     }
 
     .section_left {
         justify-content: center;
+        height: fit-content;
     }
 
     .cv-bubble {
