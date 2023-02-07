@@ -67,13 +67,12 @@ img {
 
 @keyframes header-subtext-fade-in {
     0% {
-        opacity: 0;
+      opacity: 0;
     }
-
     100% {
-        opacity: 1;
+      opacity: 1;
     }
-}
+  }
 
 .fixed {
     position: fixed;
@@ -517,16 +516,8 @@ p {
 }
 
 .img-lang {
-    width: 145px;
+    width: 100px;
     height: 74px;
-    margin: 10px;
-    filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
-}
-
-
-.img-lang-social {
-    width: 145px;
-    margin: 10px;
     filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
 }
 
@@ -539,21 +530,7 @@ a {
     float: left;
     width: 33.33%;
     padding: 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex: 1;
-    margin: 0;
 }
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
 
 /* Clear floats after image containers */
 .row::after {
@@ -576,14 +553,6 @@ a {
 
     .img-lang {
         display: block;
-        margin: 10px;
-        width: 145px;
-    }
-
-    .img-lang-social {
-        display: block;
-        margin: 10px;
-        width: 125px;
     }
 
     .header {
