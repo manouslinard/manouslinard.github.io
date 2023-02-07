@@ -132,6 +132,7 @@ img {
     justify-content: right;
     align-items: center;
     height: 90vh;
+    width: fit-content;
     padding: 30px;
 }
 
@@ -140,6 +141,7 @@ img {
     justify-content: left;
     align-items: center;
     height: 90vh;
+    width:fit-content;
     padding: 30px;
 }
 
@@ -544,6 +546,24 @@ a {
 
 .cv-bubble:hover {
     background-color: #1c69bb;
+}
+
+@media (max-width: 1290px) {
+
+    .section_center {
+        flex-direction: column;
+        height: auto;
+    }
+    .section_right {
+        justify-content: center;
+        height: fit-content;
+    }
+
+    .section_left {
+        justify-content: center;
+        height: fit-content;
+    }
+
 }
 
 @media (max-width: 767px) {
