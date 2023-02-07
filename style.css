@@ -583,7 +583,8 @@ a {
     .img-lang-social {
         display: block;
         margin: 10px;
-        width: 100%;
+        width: 110px;
+        float:left;
     }
 
     .header {
