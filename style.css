@@ -21,6 +21,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    flex-direction: column;
 }
 
 .header-text {
@@ -52,8 +53,26 @@ img {
     font-size: 36px;
     text-align: center;
     color: white;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out forwards;
 }
+
+.subtext {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    animation: header-subtext-fade-in 4s ease-in-out forwards;
+    margin-top: 1em;
+}
+
+@keyframes header-subtext-fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .fixed {
     position: fixed;
@@ -95,6 +114,7 @@ img {
     /* text-decoration: none; */
     transition: all 0.2s ease-in-out;
 }
+
 .text-hover-color a:hover {
     color: #f48024;
 }
@@ -514,7 +534,8 @@ a {
 
 /* Clear floats after image containers */
 .row::after {
-    float: none; margin: 0 auto;
+    float: none;
+    margin: 0 auto;
     content: "";
     clear: both;
     display: table;
