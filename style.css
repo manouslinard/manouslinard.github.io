@@ -569,7 +569,7 @@ a {
     background-color: #1c69bb;
 }
 
-@media (max-width: 970px) {
+@media (max-width: 767px) {
     img {
         display: none;
     }
@@ -583,8 +583,7 @@ a {
     .img-lang-social {
         display: block;
         margin: 10px;
-        width: 110px;
-        float:left;
+        width: 125px;
     }
 
     .header {
