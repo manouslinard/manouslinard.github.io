@@ -108,6 +108,7 @@ img {
 
 .navigation a:hover {
     color: #f48024;
+    transform: scale(1.06);
 }
 
 .text-hover-color a {
@@ -179,6 +180,11 @@ img {
     background: url('./brightness.png') no-repeat center center;
     background-size: contain;
     cursor: pointer;
+    transform: scale(1.1);
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.21);
 }
 
 .card {
@@ -413,6 +419,10 @@ footer {
     border-radius: 25px;
     text-align: center;
     cursor: pointer;
+}
+
+.cv-bubble:hover {
+    transform: scale(1.1);
 }
 
 .fixed-bubble {
