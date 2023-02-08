@@ -67,12 +67,13 @@ img {
 
 @keyframes header-subtext-fade-in {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 .fixed {
     position: fixed;
@@ -110,7 +111,7 @@ img {
 }
 
 .text-hover-color a {
-    color: #fff;
+    color: rgba(158, 157, 157, 0.92);
     /* text-decoration: none; */
     transition: all 0.2s ease-in-out;
 }
@@ -141,12 +142,47 @@ img {
     justify-content: left;
     align-items: center;
     height: 90vh;
-    width:fit-content;
+    width: fit-content;
     padding: 30px;
 }
 
+.slidecontainer {
+    width: 100%;
+}
 
-.card {
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.fixed-slider {
+    position: fixed;
+    top: 55px;
+    z-index: 2;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: url('./assets/brightness.jpg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+
+    .card {
     background-color: #333;
     color: #fff;
     width: 55%;
@@ -209,7 +245,7 @@ img {
 }
 
 .about-me {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     width: 55%;
     height: 90%;
@@ -262,7 +298,7 @@ p {
 }
 
 .my-projects {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     width: 55%;
     height: 90%;
@@ -315,7 +351,7 @@ p {
 }
 
 .contact {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     width: 55%;
     height: 90%;
@@ -385,7 +421,7 @@ footer {
 }
 
 .front-skill {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     width: 55%;
     height: 90%;
@@ -427,7 +463,7 @@ p {
 }
 
 .back-skill {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     width: 55%;
     height: 90%;
@@ -471,7 +507,7 @@ p {
 
 
 .tool-skill {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     width: 55%;
     height: 90%;
@@ -548,6 +584,7 @@ a {
         flex-direction: column;
         height: auto;
     }
+
     .section_right {
         justify-content: center;
         height: fit-content;

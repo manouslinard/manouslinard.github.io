@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <title>Manousos Linardakis</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-    <link rel="shortcut icon" type="image/x-icon" href="panda.ico">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" media="screen" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/panda.ico">
 </head>
 
 <body>
@@ -20,6 +20,9 @@
         <a onclick="scrollToSection('skills')">Skills</a>
         <a onclick="scrollToSection('contact')">Contact</a>
     </nav>
+    <div class="slidecontainer">
+        <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+    </div>
     <script>
         function scrollToSection(sectionId) {
             const section = document.querySelector(`#${sectionId}`);
@@ -40,13 +43,13 @@
                 In my free time, I enjoy playing music and drawing.
                 I approach every new project as an opportunity to learn and grow, and strive for excellence in both my
                 academics and my personal interests.
-            <br><br>
+                <br><br>
             </p>
         </div>
-        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/programmer.gif" />
+        <img src="./assets/gifs/programmer.gif" />
     </section>
     <section class="section_right">
-        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/box.gif" />
+        <img src="./assets/gifs/box.gif" />
         <div class="card my-projects" id="projects">
             <h2 style="font-size: 30px;
             margin-bottom: 20px; margin-left: 20px;">Projects</h2>
@@ -151,7 +154,7 @@
             <p style="font-size: 18px;
             margin-bottom: 1em;"> Feel free to reach out to me for any questions or collaborations. Here are some ways
                 to get in touch:</p>
-                <p class="row text-center">
+            <p class="row text-center">
                 <a href="mailto: manouslinard@gmail.com">
                     <img title="Gmail" class="column img-lang" style="width: 145px;"
                         src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
@@ -174,29 +177,76 @@
                 </a>
             </p>
         </div>
-        <img src="https://raw.githubusercontent.com/manouslinard/manouslinard.github.io/master/gifs/sphere.gif" />
+        <img src="./assets/gifs/sphere.gif" />
     </section>
     <div class="cv-bubble"
         onclick="window.open('https://github.com/manouslinard/manouslinard.github.io/blob/master/Manousos_CV.pdf')">
         <p style="color: white; margin-top: 17px; font-weight: bold;">CV</p>
-    <br><br>
+        <br><br>
     </div>
     <script>
         window.addEventListener('scroll', function () {
             const header = document.querySelector('.header');
             const nav = document.querySelector('.navigation');
+            const slider = document.querySelector('.slidecontainer');
             const bubble = document.querySelector('.cv-bubble');
             if (window.scrollY >= header.offsetHeight) {
                 nav.classList.add('fixed');
+                slider.classList.add('fixed-slider');
                 bubble.classList.add('fixed-bubble');
             } else if (window.scrollY >= header.offsetHeight - 50) {
                 bubble.classList.add('fixed-bubble');
             }
             else {
                 nav.classList.remove('fixed');
+                slider.classList.remove('fixed-slider');
                 bubble.classList.remove('fixed-bubble');
             }
         });
+
+        // slider:
+        let slider = document.getElementById("myRange");
+        let body = document.querySelector("body");
+        let card = document.querySelector(".card");
+        let front = document.querySelector(".front-skill");
+        let back = document.querySelector(".back-skill");
+        let tool = document.querySelector(".tool-skill");
+        let proj = document.querySelector(".my-projects");
+        let contact = document.querySelector(".contact");
+        slider.addEventListener("input", function () {
+            if (slider.value < 50) {
+                body.style.backgroundColor = "#fff";
+                body.style.color = "#000";
+                card.style.backgroundColor = "#fff";
+                card.style.color = "#000";
+                front.style.backgroundColor = "#fff";
+                front.style.color = "#000";
+                proj.style.backgroundColor = "#fff";
+                proj.style.color = "#000";
+                back.style.backgroundColor = "#fff";
+                back.style.color = "#000";
+                tool.style.backgroundColor = "#fff";
+                tool.style.color = "#000";
+                contact.style.backgroundColor = "#fff";
+                contact.style.color = "#000";
+            } else {
+                body.style.backgroundColor = "#333";
+                body.style.color = "#fff";
+                card.style.backgroundColor = "#333";
+                card.style.color = "#fff";
+                front.style.backgroundColor = "#333";
+                front.style.color = "#fff";
+                proj.style.backgroundColor = "#333";
+                proj.style.color = "#fff";
+                back.style.backgroundColor = "#333";
+                back.style.color = "#fff";
+                tool.style.backgroundColor = "#333";
+                tool.style.color = "#fff";
+                contact.style.backgroundColor = "#333";
+                contact.style.color = "#fff";
+            }
+        });
+
     </script>
 </body>
 <footer>
