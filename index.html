@@ -26,7 +26,13 @@
     <script>
         function scrollToSection(sectionId) {
             const section = document.querySelector(`#${sectionId}`);
-            section.scrollIntoView({ block: "center", behavior: 'smooth' });
+            const offset = 100;
+            section.scrollIntoView({
+                block: "center",
+                behavior: "smooth",
+                inline: "nearest",
+                offsetTop: -offset,
+            });
         }
     </script>
     <section class="section_left">
