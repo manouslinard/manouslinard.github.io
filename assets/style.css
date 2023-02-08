@@ -554,6 +554,10 @@ p {
     filter: drop-shadow(0 0 0.75rem rgb(0, 0, 0));
 }
 
+.img-lang:hover {
+    transform: scale(1.1);
+}
+
 a {
     cursor: pointer;
 }
