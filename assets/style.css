@@ -176,7 +176,7 @@ img {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: url('./brightness.jpg') no-repeat center center;
+    background: url('./brightness.png') no-repeat center center;
     background-size: contain;
     cursor: pointer;
 }
