@@ -136,9 +136,8 @@ img {
 
 .hidden {
     opacity: 0;
-    filter:blur(10px);
-    transform: translateX(-100%);
-    transition: opacity 1s, transform 1s;
+    filter:blur(5px);
+    transition: opacity 1s;
 }
 
 @media (prefers-reduced-motion) {
