@@ -9,7 +9,7 @@ function scrollToSection(sectionId) {
     });
 }
 
-const sections = document.querySelectorAll('.section');
+const hiddenSections = document.querySelectorAll('.hidden');
 let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -19,6 +19,6 @@ let observer = new IntersectionObserver((entries) => {
         }
     });
 });
-sections.forEach(section => {
-    observer.observe(section);
+hiddenSections.forEach(hiddenSection => {
+    observer.observe(hiddenSection);
 });
