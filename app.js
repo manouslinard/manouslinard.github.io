@@ -9,19 +9,29 @@ function scrollToSection(sectionId) {
     });
 }
 
-// const sectionElements = document.querySelectorAll('.card');
-const sectionCenter = document.querySelector('.section_center');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      sectionCenter.classList.add('on-screen');
-    } else {
-      sectionCenter.classList.remove('on-screen');
-    }
-  });
+let sections = document.querySelectorAll('.section');
+
+sections.forEach(section => {
+  let options = {
+    root: null,
+    threshold: 0.1
+  };
+
+  let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(function() {
+            entry.target.classList.add('show');
+        }, 250);
+      } else {
+        section.classList.remove('show');
+      }
+    });
+  }, options);
+
+  observer.observe(section);
 });
 
-observer.observe(sectionCenter);
 
 
 // const observer = new IntersectionObserver(entries => {
