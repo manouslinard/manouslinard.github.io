@@ -9,54 +9,16 @@ function scrollToSection(sectionId) {
     });
 }
 
-let sections = document.querySelectorAll('.section');
-
-sections.forEach(section => {
-  let options = {
-    root: null,
-    threshold: 0.1
-  };
-
-  let observer = new IntersectionObserver(entries => {
+const sections = document.querySelectorAll('.section');
+let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setTimeout(function() {
+        if (entry.isIntersecting) {
             entry.target.classList.add('show');
-        }, 250);
-      } else {
-        section.classList.remove('show');
-      }
+        } else {
+            entry.target.classList.remove('show');
+        }
     });
-  }, options);
-
-  observer.observe(section);
 });
-
-
-
-// const observer = new IntersectionObserver(entries => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add("visible");
-//             observer.unobserve(entry.target);
-//         }
-//     });
-// });
-
-// const section = document.getElementById("skills");
-// observer.observe(section);
-
-
-
-// const observer = new IntersectionObserver((entries)=>{
-//     entries.forEach((entry)=>{
-//         if(entry.isIntersecting){
-//             entry.target.classList.add('.show');
-//         } else {
-//             entry.target.classList.remove('.show');
-//         }
-//     })
-// })
-
-// const sectionElements = document.querySelectorAll('.card');
-// sectionElements.forEach((el)=>observer.observe(el));
+sections.forEach(section => {
+    observer.observe(section);
+});
