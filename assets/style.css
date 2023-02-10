@@ -127,7 +127,14 @@ img {
     align-items: center;
     height: 90vh;
     padding: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
+
+.section_center.on-screen {
+    opacity: 1;
+}
+
 
 .section_right {
     display: flex;

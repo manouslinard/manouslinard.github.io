@@ -7,6 +7,7 @@
     <title>Manousos Linardakis</title>
     <link rel="stylesheet" type="text/css" href="./assets/style.css" media="screen" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/panda.ico">
+    <script defer src="app.js"></script>
 </head>
 
 <body>
@@ -23,18 +24,6 @@
     <div class="slidecontainer">
         <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
     </div>
-    <script>
-        function scrollToSection(sectionId) {
-            const section = document.querySelector(`#${sectionId}`);
-            const offset = 100;
-            section.scrollIntoView({
-                block: "center",
-                behavior: "smooth",
-                inline: "nearest",
-                offsetTop: -offset,
-            });
-        }
-    </script>
     <section class="section_left">
         <div class="card about-me" id="about">
             <h2 style="font-size: 30px;
