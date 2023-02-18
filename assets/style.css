@@ -177,13 +177,31 @@ img {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: url('./brightness.png') no-repeat center center;
-    background-size: contain;
     cursor: pointer;
+    background-image: url('./brightness.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     transform: scale(1.1);
 }
 
 .slider::-webkit-slider-thumb:hover {
+    transform: scale(1.21);
+}
+
+/* For Firefox */
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-image: url('./brightness.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transform: scale(1.1);
+}
+
+.slider::-moz-range-thumb:hover {
     transform: scale(1.21);
 }
 
