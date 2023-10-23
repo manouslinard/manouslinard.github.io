@@ -739,6 +739,7 @@ a {
         height: fit-content;
     }
 
+    .hidden-bubbles,
     .main-bubble {
         position: fixed;
         bottom: 20px;
