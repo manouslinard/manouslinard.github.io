@@ -48,6 +48,14 @@ img {
 }
 
 
+.hidden-bubbles {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
 .header h1 {
     margin: 0;
     font-size: 36px;
@@ -427,7 +435,8 @@ footer {
     text-align: center;
 }
 
-.cv-bubble {
+.hidden-bubbles,
+.main-bubble {
     position: fixed;
     top: 20px;
     right: 25px;
@@ -437,11 +446,9 @@ footer {
     border-radius: 25px;
     text-align: center;
     cursor: pointer;
+    border: 2px solid white;
 }
 
-.cv-bubble:hover {
-    transform: scale(1.1);
-}
 
 .fixed-bubble {
     position: fixed;
@@ -607,10 +614,6 @@ a {
     text-align: center;
 }
 
-.cv-bubble:hover {
-    background-color: #1c69bb;
-}
-
 @media (max-width: 1290px) {
 
     .section_center {
@@ -736,7 +739,7 @@ a {
         height: fit-content;
     }
 
-    .cv-bubble {
+    .main-bubble {
         position: fixed;
         bottom: 20px;
         right: 20px;

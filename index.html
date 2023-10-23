@@ -202,28 +202,76 @@
         </div>
         <img src="./assets/gifs/sphere.gif" data-tilt data-tilt-max="1" data-tilt-speed="100" data-tilt-reverse="true" data-tilt-scale="1.03"/>
     </section>
-    <div class="cv-bubble"
+    <div class="main-bubble" onclick="toggleBubbles(this)"
+        onmouseover="this.style.backgroundColor='#1c69bb'; this.style.transform='scale(1.1)';"
+        onmouseout="this.style.backgroundColor='rgb(17, 48, 189)'; this.style.transform='scale(1)';">
+        <p style="color: white; margin-top: 15px; font-weight: bold;">i</p>
+    </div>
+    <div class="hidden-bubbles" style="margin-top: 60px; background-color: green;"
+        onmouseover="this.style.backgroundColor='rgb(78, 163, 105)'; this.style.transform='scale(1.1)';"
+        onmouseout="this.style.backgroundColor='green'; this.style.transform='scale(1)';"
         onclick="window.open('https://manouslinard.github.io/Manousos_CV.pdf')">
-        <p style="color: white; margin-top: 17px; font-weight: bold;">CV</p>
-        <br><br>
+        <p style="color: white; margin-top: 15px; font-weight: bold;">CV</p>
+    </div>
+    <div class="hidden-bubbles" style="margin-top: 120px; background-color: chocolate;"
+        onmouseover="this.style.backgroundColor='rgb(225, 132, 66)'; this.style.transform='scale(1.1)';"
+        onmouseout="this.style.backgroundColor='chocolate'; this.style.transform='scale(1)';"
+        onclick="window.open('https://example.com')">
+        <p style="color: white; margin-top: 15px; font-weight: bold;">LOR</p>
+    </div>
+    <div class="hidden-bubbles" style="margin-top: 180px; background-color: darkviolet;"
+        onmouseover="this.style.backgroundColor='rgb(165, 87, 239)'; this.style.transform='scale(1.1)';"
+        onmouseout="this.style.backgroundColor='darkviolet'; this.style.transform='scale(1)';"
+        onclick="window.open('https://example.com')">
+        <p style="color: white; margin-top: 15px; font-weight: bold;">EDU</p>
     </div>
     <script>
+        let bubblesVisible = false;
+        function toggleBubbles(infobubble) {
+            const hiddenBubbles = document.querySelectorAll('.hidden-bubbles');
+            if (!bubblesVisible) {
+                hiddenBubbles.forEach((bubble) => {
+                    bubble.style.display = 'flex';
+                });
+                infobubble.style.backgroundColor = '#1c69bb';
+                infobubble.style.transform = 'scale(1.1)';
+                bubblesVisible = true;
+            } else {
+                hiddenBubbles.forEach((bubble) => {
+                    bubble.style.display = 'none';
+                });
+                infobubble.style.backgroundColor = 'rgb(17, 48, 189)';
+                infobubble.style.transform = 'scale(1)';
+                bubblesVisible = false;
+            }
+        }
+
         window.addEventListener('scroll', function () {
-            const header = document.querySelector('.header');
-            const nav = document.querySelector('.navigation');
-            const slider = document.querySelector('.slidecontainer');
-            const bubble = document.querySelector('.cv-bubble');
+        const header = document.querySelector('.header');
+        const nav = document.querySelector('.navigation');
+        const slider = document.querySelector('.slidecontainer');
+        const bubble = document.querySelector('.main-bubble');
+        const hidden_bubbles = document.querySelectorAll('.hidden-bubbles');
+
             if (window.scrollY >= header.offsetHeight) {
                 nav.classList.add('fixed');
                 slider.classList.add('fixed-slider');
                 bubble.classList.add('fixed-bubble');
+                hidden_bubbles.forEach((hiddenBubble) => {
+                    hiddenBubble.classList.add('fixed-bubble');
+                });
             } else if (window.scrollY >= header.offsetHeight - 50) {
                 bubble.classList.add('fixed-bubble');
-            }
-            else {
+                hidden_bubbles.forEach((hiddenBubble) => {
+                    hiddenBubble.classList.add('fixed-bubble');
+                });
+            } else {
                 nav.classList.remove('fixed');
                 slider.classList.remove('fixed-slider');
                 bubble.classList.remove('fixed-bubble');
+                hidden_bubbles.forEach((hiddenBubble) => {
+                    hiddenBubble.classList.remove('fixed-bubble');
+                });
             }
         });
 
