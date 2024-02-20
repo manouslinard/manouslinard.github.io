@@ -4,6 +4,8 @@ Check out the web-portfolio [here](http://manouslinard.github.io/).
 
 &copy; Manousos Linardakis. All rights reserved.
 
+[Particles generation](https://vincentgarreau.com/particles.js/#default) - create a json config file for particles.
+
 Use this awesome [api](https://github.com/DenverCoder1/minimalistic-wallpaper-collection) for generating minimalistic backgrounds.
 
 Gif source:
