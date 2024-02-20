@@ -7,12 +7,16 @@
     <title>Manousos Linardakis</title>
     <link rel="stylesheet" type="text/css" href="./assets/style.css" media="screen" />
     <link rel="shortcut icon" type="image/x-icon" href="./assets/panda.ico">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <h1>Hello, I'm Manousos Linardakis</h1>
-        <p class="subtext">Welcome to my Web Portfolio</p>
+        <div id="particles-js"></div>
+        <div class="header-content">
+          <h1>Hello, I'm Manousos Linardakis</h1>
+          <p class="subtext">Welcome to my Web Portfolio</p>
+        </div>
     </header>
     <nav class="navigation">
         <a onclick="scrollToSection('about')">About</a>
@@ -34,6 +38,13 @@
                 offsetTop: -offset,
             });
         }
+    </script>
+    <script>
+        window.onload = function() {
+            particlesJS.load('particles-js', './assets/particles.json', function() {
+                console.log('callback - particles-js config loaded');
+            });
+        };
     </script>
     <section class="section_left">
         <div class="card about-me" id="about" data-tilt data-tilt-max="3" data-tilt-speed="100" data-tilt-reverse="true" data-tilt-scale="1.05" data-tilt data-tilt-glare data-tilt-max-glare="0.15">
