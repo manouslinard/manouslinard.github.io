@@ -32,8 +32,8 @@ body {
 
 .header-content {
     position: relative;
-    z-index:  1; /* This will ensure the header content is above the particles */
-    color: white; /* Set the text color to be visible against the particles background */
+    z-index:  1;
+    color: white;
 }
 
 .header-text {
