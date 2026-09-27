@@ -605,6 +605,18 @@ p {
     transform: scale(1.1);
 }
 
+.skill-placeholder {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    border: 1px dashed currentColor;
+    border-radius: 6px;
+    box-sizing: border-box;
+    opacity: 0.75;
+}
+
 a {
     cursor: pointer;
 }
